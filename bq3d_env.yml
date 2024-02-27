@@ -12,5 +12,6 @@ dependencies:
     - Cython==0.29.24
     - antspyx
     - ipykernel
+    - ipywidgets
 #must download bq3d from the github manually! 
 #pip install git+git
