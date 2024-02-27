@@ -1,6 +1,12 @@
 # bq3d_demo
 BrainQuant3D setup for the Data Analysis Workshop May 2024
 
+# Downloading Data
+All data used for this tutorial is located at https://osf.io/m347v/?view_only=f0cc945410554286b78c10e41ab511bb.
+
+Allen Brain Atlas Registration data is stored within the Warping.zip (477.9 MB zipped, 2.32 GB unzipped)
+
+# Setting up the Jupyter Notebooks
 You may need to download these programs onto your computer:
 1. git (for setting up BrainQuant3D as a package): https://git-scm.com/downloads
 2. anaconda for isolating packages in its own Python environment): https://www.anaconda.com/download

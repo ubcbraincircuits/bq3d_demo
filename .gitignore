@@ -1,3 +1,4 @@
-.tif
-.tiff
-.ilp
+*.tif
+*.tiff
+*.ilp
+/lifecanvas
