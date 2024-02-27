@@ -21,8 +21,8 @@ OriginalResolution = (9, 9, 9);
 
 #Orientation: 1,2,3 means the same orientation as the reference and atlas files.
 #Flip axis with - sign (eg. (-1,2,3) flips z). 3D Rotate by swapping numbers. (eg. (2,1,3) swaps x and y)
-FinalOrientation = (1, -2, 3); #Left hemisphere orientation used
-#FinalOrientation = (-1, -2, 3); #Right hemisphere orientation used
+FinalOrientation = (1, -2, 3); #!!!NOTE: Left hemisphere orientation used
+#FinalOrientation = (-1, -2, 3); #!!!NOTE: Right hemisphere orientation used
 
 #Resolution of the Atlas (in um / pixel)
 AtlasResolution = (25, 25, 25);

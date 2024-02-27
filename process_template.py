@@ -44,20 +44,20 @@ from bq3d.stack_processing.cell_detection import jsonify_points
 points = io.readPoints(sink)
 # Downsample to chromatic correction size
 points = resamplePoints(sink, **CorrectionResamplingPointsParam);
-vox = voxelize(points, CorrectionResamplingParamSignal['sink'] , sink = os.path.join(BaseDirectory, 'cells_cd1.tif'), **voxelizeParameter);
+vox = voxelize(points, CorrectionResamplingParamSignal['sink'] , sink = os.path.join(AnalysisDirectory, 'cells_cd1.tif'), **voxelizeParameter);
 # Apply correction transform
 points = transformPoints(points, CorrectionAlignmentParam["resultDirectory"], invert = True);
-vox = voxelize(points, CorrectionResamplingParamSignal['sink'] , sink = os.path.join(BaseDirectory, 'cells_corr.tif'), **voxelizeParameter);
+vox = voxelize(points, CorrectionResamplingParamSignal['sink'] , sink = os.path.join(AnalysisDirectory, 'cells_corr.tif'), **voxelizeParameter);
 # Upsample back to original size
 points = resamplePoints(points, **CorrectionResamplingPointsInverseParam);
-#vox = voxelize(points, SignalFile , sink = os.path.join(BaseDirectory, 'cells_full.tif'), **voxelizeParameter);
+#vox = voxelize(points, SignalFile , sink = os.path.join(AnalysisDirectory, 'cells_full.tif'), **voxelizeParameter);
 # Downsample to atlas resolution
 points = resamplePoints(points, **RegistrationResamplingPointParam);
-vox = voxelize(points, RegistrationResamplingParamAuto['sink'], sink = os.path.join(BaseDirectory, 'cells_ds.tif'), **voxelizeParameter);
+vox = voxelize(points, RegistrationResamplingParamAuto['sink'], sink = os.path.join(AnalysisDirectory, 'cells_ds.tif'), **voxelizeParameter);
 # Warp to atlas
 points = transformPoints(points, RegistrationAlignmentParam["resultDirectory"], invert = True);
 # Write out heatmap and transformed points
-vox = voxelize(points, AtlasFile, sink = os.path.join(BaseDirectory, 'cells_atlas.tif'), **voxelizeParameter);
+vox = voxelize(points, AtlasFile, sink = os.path.join(AnalysisDirectory, 'cells_atlas.tif'), **voxelizeParameter);
 points = points.T.tolist()
 points_with_props = {**io.readData(sink), 'z': points[0], 'y': points[1], 'x': points[2]}
 io.writePoints(transformedCellsFile, points_with_props);
@@ -68,4 +68,4 @@ print('generating atlas')
 a = Atlas(collapse=True)
 a.add_point_groups(transformedCellsFile)
 print('generating dataframe')
-a.get_region_info_dataframe('id', ['nPoints', 'points_density', 'volume', 'name', 'parent_id'], sink=os.path.join(BaseDirectory, 'cells_atlas.csv'))
+a.get_region_info_dataframe('id', ['nPoints', 'points_density', 'volume', 'name', 'parent_id'], sink=os.path.join(AnalysisDirectory, 'cells_atlas.csv'))
