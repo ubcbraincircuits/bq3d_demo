@@ -4,7 +4,9 @@ BrainQuant3D setup for the Data Analysis Workshop May 2024
 # Downloading Data
 All data used for this tutorial is located at https://osf.io/m347v/?view_only=f0cc945410554286b78c10e41ab511bb.
 
-Allen Brain Atlas Registration data is stored within the Warping.zip (477.9 MB zipped, 2.32 GB unzipped)
+- Allen Brain Atlas Registration files are in the "Brain Registration" OSF component. Click the file and select "Check out file" to download it (477.9 MB zipped, 2.32 GB unzipped).
+- Demo brain image slices are in the "Demo Data Subset" OSF component. Press the "OSF Storage (Canada - Montreal)" tab underneath "Demo Data Subset" in the file tree, and then select "Download as zip" to unwrap all the files (78.6 MB).
+- the Ilastik filter used is in the "ilastik filter" OSF component. Click the file and select "Check out file" to download it (794.6 MB zipped, 2.75 GB unzipped).
 
 # Setting up the Jupyter Notebooks
 You may need to download these programs onto your computer:
