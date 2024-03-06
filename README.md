@@ -20,6 +20,13 @@ To find where you downloaded these files
 Then, open your command line (mac, linux) or anaconda prompt (windows) and execute these commands:
 ```
 cd <path to directory where this notebook and the .yml file is in> #e.g. cd mnt/ssd
+```
+> Hints for finding filepaths: 
+> - Ubuntu Linux: Ctrl+L > Ctrl+C for an open directory in Files
+>   - or Right-click file/folder > "Properties" 
+> - Mac: Option+Right-click file/folder > "Copy <file> as Pathname" 
+> - Windows: Shift+Right-click file/folder > "Copy as Path" 
+```
 conda env create -f bq3d_env.yml
 conda activate bq3d
 pip install git+https://github.com/MehwishUBC/BrainQuant3D_cFos.git
