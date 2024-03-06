@@ -4,3 +4,7 @@
 /lifecanvas
 /filters
 /data_subset
+/warping
+/demo
+*.zip
+/.ipynb_checkpoints
