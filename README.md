@@ -8,6 +8,9 @@ All data used for this tutorial is located at https://osf.io/m347v/?view_only=f0
 - Demo brain image slices are in the "Demo Data Subset" OSF component. Press the "OSF Storage (Canada - Montreal)" tab underneath "Demo Data Subset" in the file tree, and then select "Download as zip" to unwrap all the files (78.6 MB).
 - the Ilastik filter used is in the "ilastik filter" OSF component. Click the file and select "Check out file" to download it (794.6 MB zipped, 2.75 GB unzipped).
 
+# Windows Setup
+To use BrainQuant3D on Windows, you must install Windows Subsystem for Linux (WSL): https://learn.microsoft.com/en-us/windows/wsl/install. This allows Windows users to use Linux applications and command-line tools. You can then run all of your commands using the WSL app.
+
 # Setting up the Jupyter Notebooks
 You may need to download these programs onto your computer:
 1. git (for setting up BrainQuant3D as a package): https://git-scm.com/downloads
@@ -19,7 +22,7 @@ Then, open your command line (mac, linux) or anaconda prompt (windows) and execu
 cd <path to directory where this notebook and the .yml file is in> #e.g. cd mnt/ssd
 conda env create -f bq3d_env.yml
 conda activate bq3d
-pip install git+https://github.com/sunilgandhilab/brainquant3d.git
+pip install git+https://github.com/MehwishUBC/BrainQuant3D_cFos.git
 ```
 Choose the newly created "bq3d" conda environment as the kernel to run these Jupyter Notebooks and code. To activate Jupyter Notebooks, run this in your command line/anaconda prompt:
 ```
