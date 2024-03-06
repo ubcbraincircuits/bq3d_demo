@@ -8,13 +8,13 @@ from pathlib import Path
 ######################### Data parameters
 
 #Directory to save all the results, usually containing the data for one sample
-WorkingDirectory = str(Path('/Users/ytcao/Documents/GitHub/bq3d_demo/lifecanvas')) ###NOTE: from 01_bq3d_tutorial.ipynb step 1
+WorkingDirectory = str(Path('/Users/ytcao/Documents/GitHub/bq3d_demo/demo')) ###NOTE: from 01_bq3d_tutorial.ipynb step 1
 AnalysisDirectory = str(Path(WorkingDirectory, "analysis"))
 DataDirectory = str(Path(WorkingDirectory, "data"))
 
-#Data File and Reference channel File, usually as a sequence of files from the microscope
-AutofluoFile = str(Path(DataDirectory, '787287_NN_left_hemi_grayscale', "NN_428180_463220_025000_left_T\d{3,4}_Z405_C01.tif")) ###NOTE: from 01_bq3d_tutorial.ipynb step 2
-SignalFile = str(Path(DataDirectory, '787287_cfos_left_hemi_grayscale', "787287_428180_463220_025000_full_sagittal_left_T\d{3,4}_Z410_C01.tif")) ###NOTE: from 01_bq3d_tutorial.ipynb step 2
+#Data File and Reference channel File, usually as a sequence of files from the microscope ###NOTE: from 01_bq3d_tutorial.ipynb step 2
+AutofluoFile = str(Path(DataDirectory, "background", "NN_428180_463220_025000_left_T001_Z\d{3,4}_C01.tif"))
+SignalFile = str(Path(DataDirectory, "signal", "787287_428180_463220_025000_full_sagittal_left_T001_Z\d{3,4}_C01.tif"))
 
 #Resolution of the Raw Data (in um / pixel)
 OriginalResolution = (9, 9, 9);
@@ -31,7 +31,7 @@ AtlasResolution = (25, 25, 25);
 CorrectionResolution =  (25, 25, 25);
 
 #Path to registration parameters and atlases
-PathReg = str(Path('/Users/ytcao/Documents/Warping')); ###NOTE: from 00_bq3d_setup.ipynb step 01_bq3d_tutorial.ipynb step 4
+PathReg = str(Path('/mnt/d/brainquant_RC/bq3d_demo/Warping')) ###NOTE: from 00_bq3d_setup.ipynb step 01_bq3d_tutorial.ipynb step 4
 AtlasFile      = str(Path(PathReg, 'ARA2', 'average_template_25_right.tif'));
 AnnotationFile = str(Path(PathReg, 'ARA2', 'annotation_25_right.tif'));
 
