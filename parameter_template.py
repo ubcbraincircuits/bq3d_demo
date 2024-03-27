@@ -31,7 +31,7 @@ AtlasResolution = (25, 25, 25);
 CorrectionResolution =  (25, 25, 25);
 
 #Path to registration parameters and atlases
-PathReg = str(Path('/mnt/d/brainquant_RC/bq3d_demo/Warping')) ###NOTE: from 00_bq3d_setup.ipynb step 01_bq3d_tutorial.ipynb step 4
+PathReg = str(Path('/Users/ytcao/Documents/Warping')) ###NOTE: from 00_bq3d_setup.ipynb step 2/3
 AtlasFile      = str(Path(PathReg, 'ARA2', 'average_template_25_right.tif'));
 AnnotationFile = str(Path(PathReg, 'ARA2', 'annotation_25_right.tif'));
 
