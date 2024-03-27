@@ -8,3 +8,4 @@
 /demo
 *.zip
 /.ipynb_checkpoints
+/data_subset6
